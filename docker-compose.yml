@@ -1,0 +1,25 @@
+version:'3.7'
+services:
+
+        data1:
+            container_name: node1
+              image: mysql:latest
+                ports:
+                        - "8070:9080"
+                     env:
+                      -Mysql_Allow_Empty_Password=yes
+        data2:
+            container_name: node2
+              image: mysql:latest
+                ports:
+                        - "8090:9080"
+                      env:
+                      -Mysql_Allow_Empty_Password=yes
+
+        data3:
+           container_name: node3
+              image: mysql:latest
+               ports:
+                        - "8080:9080"
+                        env:
+                     -Mysql_Allow_Empty_Password=yes     
